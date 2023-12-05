@@ -36,4 +36,26 @@ supports a wide range of operators, including arithmetic, assignment, comparison
  - Assignment operators: =, +=, -=, *=, /=.
  - Comparison operators: ==, !=, >, <, >=, <=.
  - Logical operators: && (AND), || (OR), ! (NOT).
-  
+
+## Type Conversion in Java
+
+  When you assign a value of one data type to another, the two types might not be compatible with each other. If the data types are compatible, then Java will perform the conversion automatically known as Automatic Type Conversion, and if not then they need to be cast or converted explicitly.
+  Let's look at both the conversions.
+
+  1. Widening or Automatic Type Conversion
+    Widening conversion takes place when two data types are automatically converted. This happens when:  
+     - The two data types are compatible.
+     - When we assign a value of a smaller data type to a bigger data type.
+
+    Byte -> Short -> Int -> Long -> Float -> Double
+
+<br>
+  1. Narrowing or Explicit Conversion
+   If we want to assign a value of a larger data type to a smaller data type we perform explicit type casting or narrowing.  
+
+- This is useful for incompatible data types where automatic conversion cannot be done.
+- Here, the target type specifies the desired type to convert the specified value to.
+
+```
+Double -> Float -> Long -> Int -> Short -> Byte
+```    
