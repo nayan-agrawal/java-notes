@@ -4,7 +4,7 @@
 
 ## ❓What it is?
 
-This contains my version of java notes which I learned from famous [Java Tutorial for Beginners 2023](https://www.youtube.com/playlist?list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5) by Navin Reddy (Telusko)    
+This contains my version of java notes which I learned from various resources. Feel free to read and learn from it. 
 
 ## Authors
 

@@ -35,3 +35,7 @@ JVM and necessary libraries to run Java applications.
  - Developers use the JDK to write, compile, and debug Java programs.
  - It is available in different versions, with each version introducing new features and improvements.
   
+
+To start programming in Java, you need to install the Java Development Kit
+(JDK) on your system. Once installed, you can use a text editor or Integrated Development Environment (IDE) to write Java code.
+ 
