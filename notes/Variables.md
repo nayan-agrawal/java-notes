@@ -7,5 +7,7 @@
 
 Examples of variable initializations and declarations
 ```
-
+int number; // variable declaration
+number = 56; // variable initialization
+String name = "Nayan" // variable declaration and initialization
 ```
