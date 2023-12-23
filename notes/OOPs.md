@@ -190,3 +190,57 @@ Following are the types of inheritance in Java
 
  - **Hybrid inheritance**
     Hybrid inheritance is a combination of simple, multiple inheritance and hierarchical inheritance. 
+
+#### Encapsulation
+Encapsulation is the process of combining data and functions into a single unit called class. In Encapsulation, the data is not accessed directly; it is accessed through the functions present inside the class. In simpler words, attributes of the class are kept private and public getter and setter methods are provided to manipulate these attributes. Thus, encapsulation makes the concept of data hiding possible.(Data hiding: a language feature to restrict access to members of an object, reducing the negative effect due to dependencies. e.g. "protected", "private" feature in Java). 
+
+#### Abstraction
+Data abstraction is one of the most essential and important features of object-oriented programming. Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation. Consider a real-life example of a man driving a car. The man only knows that pressing the accelerators will increase the speed of the car or applying brakes will stop the car, but he does not know about how on pressing the accelerator the speed is increasing, he does not know about the inner mechanism of the car or the implementation of the accelerator, brakes, etc in the car. This is what abstraction is.
+
+**Data Binding** 
+Data binding is a process of binding the application UI and business logic. Any change made in the business logic will reflect directly to the application UI. 
+
+Abstraction can be acheived in 2 ways
+- Abstract Class
+- Interfaces
+
+##### Abstract Class
+ - An abstract class must be declared with an abstract keyword.
+ - It can have abstract and non-abstract methods.
+ - It cannot be instantiated.
+ - It can have constructors and static methods also.
+ - It can have final methods which will force the subclass not to change the body of the method.
+
+##### Interfaces
+ - All the fields in interfaces are public, static and final by default.
+ - All methods are public & abstract by default.
+ - A class that implements an interface must implement all the methods declared in the interface.
+ - Interfaces support the functionality of multiple inheritance.
+
+#### Static Keyword in Java
+The static keyword in Java is mainly used for memory management. The static keyword in Java is used to share the same variable or method of a given class. The users can apply static keywords with variables, methods, blocks, and nested classes. The static keyword belongs to the class than an instance of the class. The static keyword is used for a constant variable or a method that is the same for every instance of a class.
+
+Here are some characteristics of the static keyword in Java:
+
+ - **Shared memory allocation**: Static variables and methods are allocated memory space only once during the execution of the program. This memory space is shared among all instances of the class, which makes static members useful for maintaining global state or shared functionality.
+ - **Accessible without object instantiation**: Static members can be accessed without the need to create an instance of the class. This makes them useful for providing utility functions and constants that can be used across the entire program.
+ - **Associated with class, not objects**: Static members are associated with the class, not with individual objects. This means that changes to a static member are reflected in all instances of the class, and that you can access static members using the class name rather than an object reference.
+ - **Cannot access non-static members**: Static methods and variables cannot access non-static members of a class, as they are not associated with any particular instance of the class.
+ - **Can be overloaded, but not overridden**: Static methods can be overloaded, which means that you can define multiple methods with the same name but different parameters. However, they cannot be overridden, as they are associated with the class rather than with a particular instance of the class.
+
+
+##### Static Blocks
+If you need to do the computation in order to initialize your static variables, you can declare a static block that gets executed exactly once, when the class is first loaded. 
+
+##### Static Variables
+When a variable is declared as static, then a single copy of the variable is created and shared among all objects at the class level. Static variables are, essentially, global variables. All instances of the class share the same static variable.
+
+##### Static Methods
+When a method is declared with the static keyword, it is known as the static method. The most common example of a static method is the main( ) method. As discussed above, Any static member can be accessed before any objects of its class are created, and without reference to any object. Methods declared as static have several restrictions: 
+
+ - They can only directly call other static methods.
+ - They can only directly access static data.
+ - They cannot refer to this or super in any way.
+
+##### Static Classes
+A class can be made static only if it is a nested class. We cannot declare a top-level class with a static modifier but can declare nested classes as static. Such types of classes are called Nested static classes. Nested static class doesn’t need a reference of Outer class. In this case, a static class cannot access non-static members of the Outer class. 
