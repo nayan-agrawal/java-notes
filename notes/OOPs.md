@@ -1,0 +1,192 @@
+# OOPS in Java
+
+#### What is Object Oriented Programming?
+It is a methodology or paradigm to design a program using classes and objects. It simplifies the software development and maintenance by implementing real-world entities like inheritance, hiding, polymorphism, etc in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
+Below are the few most important OOPs concepts used in programming
+- Class
+- Objects
+- Data Abstraction
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Dynamic Binding
+- Message Passing
+
+Let us study and understand this concepts in detail
+
+#### Class
+ It is a user-defined data type which defines its properties and its functions. Class is the only logical representation of the data. It represents the set of properties or methods that are common to all objects of one type. A class is like a blueprint for an object. 
+ 
+ For example, Human being is a class. The body parts of a human being are its properties, and the actions performed by the body parts are known as functions. Consider another example as the Class of Cars. There may be many cars with different names and brands but all of them will share some common properties like all of them will have 4 wheels, Speed Limit, Mileage range, etc. So here, Car is the class, and wheels, speed limits, mileage are their properties.
+ 
+ Note: The class does not occupy any memory space till the time an object is instantiated. 
+
+#### Objects
+ It is a basic unit of Object-Oriented Programming and represents the real-life entities. It is an instance of the class. An object can represent a person, place or any other item and thus has an identity, state and behavior. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created using a new keyword) then space is allocated for the variable in a heap, and the starting address is stored in the stack memory. An object can operate on both data members and member functions. 
+
+ Each object contains data and code to manipulate the data. Objects can interact without having to know details of each other’s data or code, it is sufficient to know the type of message accepted and type of response returned by the objects. 
+
+#### this Keyword in Java
+‘this’ is a reference variable that refers to the current object, or can be said “this” in Java is a keyword that refers to the current object instance. It can be used to call current class methods and fields, to pass an instance of the current class as a parameter, and to differentiate between the local and instance variables. Using “this” reference can improve code readability and reduce naming conflicts.
+
+Following are the ways to use the ‘this’ keyword in Java mentioned below:
+ - Using the ‘this’ keyword to refer to current class instance variables.
+ - Using this() to invoke the current class constructor.
+ - Using ‘this’ keyword to return the current class instance.
+ - Using ‘this’ keyword as the method parameter.
+ - Using ‘this’ keyword to invoke the current class method. 
+ - Using ‘this’ keyword as an argument in the constructor call.
+
+#### Constructors in Java
+Constructor is a special method which is invoked automatically at the time of object creation. It is used to initialize the data members of new objects generally. 
+At the time of calling the constructor, memory for the object is allocated in the memory. Every time an object is created using the new() keyword, at least one constructor is called.
+
+> Note: It is not necessary to write a constructor for a class. It is because the java compiler creates a default constructor (constructor with no arguments) if your class doesn’t have any.
+
+###### How Java Constructors are different from Java Methods?
+ - Constructors must have the same name as the class within which it is defined it is not necessary for the method in Java.
+ - Constructors do not return any type while method(s) have the return type or void if does not return any value.
+ - Constructors are called only once at the time of Object creation while method(s) can be called any number of times.
+
+###### Types of Constructors in Java
+ - Default Constructor or Non-parameterized Constructor
+ - Parametrized Constructor
+ - Copy Constructor
+  
+**Default Constructor**
+A constructor which has no argument is known as non-parameterized constructor(or no-argument constructor / default constructor). It is invoked at the time of creating an object. If we don’t create one then it is created by default by Java.
+
+```
+class Student {
+    String name;
+    int age;
+
+    Student() {
+        System.out.println("Constructor called");
+    }
+}
+```
+
+Note: Default constructor provides the default values to the object like 0, null, etc. depending on the type.
+
+**Parametrized Constructor**
+ Constructor which has parameters is called a parameterized constructor. It is used to provide different values to distinct objects.
+
+```
+// Java Program for Parameterized Constructor
+import java.io.*;
+class Student {
+	// data members of the class.
+	String name;
+	int id;
+	Student(String name, int id)
+	{
+		this.name = name;
+		this.id = id;
+	}
+}
+class Program {
+	public static void main(String[] args)
+	{
+		// This would invoke the parameterized constructor.
+		Student stud1 = new Student("avinash", 68);
+		System.out.println("Student Name :" + stud1.name
+						+ " and Student ID :" + stud1.id);
+	}
+}
+
+```
+
+**Copy Constructor**
+A Copy constructor is an overloaded constructor used to declare and initialize an object from another object. There is only a user defined copy constructor in Java(C++ has a default one too).
+
+```
+class Student {
+    String name;
+    int age;
+
+    Student(Student s2) {
+        this.name = s2.name;
+        this.age = s2.age;
+    }
+}
+```
+
+> Note : Unlike languages like C++, Java has no Destructor. Instead, Java has an efficient  garbage collector that deallocates memory automatically.
+
+#### Polymorphism
+The word polymorphism means having many forms. In simple words, we can define polymorphism as the ability of a message to be displayed in more than one form. For example, A person at the same time can have different characteristics. Like a man at the same time is a father, a husband, an employee. So the same person posses different behavior in different situations. This is called polymorphism.
+
+![Polymorphism in Java](images/PolymorphisminObjectOrientedProgramming.png)
+
+Now, let us understand the types of polymorphism in detail.
+**Complie-Time Polymorphism**
+The polymorphism which is implemented at the compile time is known as compile-time polymorphism. Example - Method Overloading 
+
+- _Method Overloading_:
+Method overloading is a technique which allows you to have more than one function with the same function name but with different functionality. Method overloading can be possible on the following basis: 
+- The type of the parameters passed to the function. 
+- The number of parameters passed to the function.
+- The return type of the function.
+  
+  Let us look at the following code snippet to understand it in a better way.
+
+```
+class Student {
+    String name;
+    String age;
+
+    public void displayInfo(String name) {
+        System.out.println(name);
+    }
+
+    public void displayInfo(int age) {
+        System.out.println(age);
+    }
+
+    public void displayInfo(String name, int age) {
+        System.out.println(name);
+        System.out.println(age);
+    }
+}
+```
+
+**Runtime Polymorphism**
+Runtime polymorphism is also known as **dynamic polymorphism**. Function overriding is an example of runtime polymorphism. Function overriding means when the child class contains the method which is already present in the parent class. Hence, the child class overrides the method of the parent class. In case of function overriding, parent and child classes both contain the same function with a different definition. The call to the function is determined at runtime is known as runtime polymorphism.
+
+```
+class Shape {
+    public void area() {
+        System.out.println("Displays area of shape");
+    }
+}
+
+class Triangle extends Shape {
+    public void area(int h, int b) {
+        System.out.println((1/2) * b * h);
+    }
+}
+
+class Circle extends Shape {
+    public void area(int r) {
+        System.out.println((3.14) * r * r);
+    }
+}
+```
+
+#### Inheritance
+Inheritance is a process in which one object acquires all the properties and behaviors of its parent object automatically. In such a way, you can reuse, extend or modify the attributes and behaviors which are defined in other classes. 
+In Java, the class which inherits the members of another class is called **derived class** and the class whose members are inherited is called **base class**. The derived class is the specialized class for the base class. 
+
+Following are the types of inheritance in Java
+ - **Single Inheritance**
+    When one class inherits another class, it is known as single level inheritance 
+
+ - **Hierarchical inheritance**
+    Hierarchical inheritance is defined as the process of deriving more than one class from a base class. 
+
+ - **Multilevel inheritance**
+    Multilevel inheritance is a process of deriving a class from another derived class. 
+
+ - **Hybrid inheritance**
+    Hybrid inheritance is a combination of simple, multiple inheritance and hierarchical inheritance. 
