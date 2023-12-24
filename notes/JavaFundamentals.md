@@ -59,3 +59,6 @@ supports a wide range of operators, including arithmetic, assignment, comparison
 ```
 Double -> Float -> Long -> Int -> Short -> Byte
 ```    
+
+#### How does Java handle Unicode characters? Why is it important?
+Java uses Unicode to handle character encoding, allowing it to support characters from various writing systems. Unicode is important as it ensures proper representation of characters from different languages and helps in creating internationalized applications that can work across different locales.

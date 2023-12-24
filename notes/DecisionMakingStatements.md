@@ -1,7 +1,7 @@
 # Control Flow Statements in Java
 A programming language uses control statements to control the flow of execution of a program based on certain conditions. These are used to cause the flow of execution to advance and branch based on changes to the state of a program. 
 
-Java provides following selection or control flow statements
+Java provides following decision making statements
  - if
  - if-else
  - nested-if
