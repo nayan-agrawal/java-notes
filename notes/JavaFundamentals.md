@@ -83,6 +83,24 @@ supports a wide range of operators, including arithmetic, assignment, comparison
  - Comparison operators: ==, !=, >, <, >=, <=.
  - Logical operators: && (AND), || (OR), ! (NOT).
 
+![Operators Precedence and Associativity](../notes/images/operators.png)
+
+#### Bitwise Operators in Java
+Bitwise operators are used to performing the manipulation of individual bits of a number. They can be used with any integral type (char, short, int, etc.). They are used when performing update and query operations of the Binary indexed trees. 
+ - Bitwise OR: |
+ - Bitwise AND: &
+ - Bitwise XOR: ^
+ - Bitwise Compliment: ~
+
+**Bit-Shift Operators (Shift Operators)**
+Shift operators are used to shift the bits of a number left or right, thereby multiplying or dividing the number by two, respectively. They can be used when we have to multiply or divide a number by two. 
+
+Shift Operators are further divided into 4 types. These are:
+ - Signed Right shift operator (>>)
+ - Unsigned Right shift operator (>>>)
+ - Left shift operator (<<)
+ - Unsigned Left shift operator (<<<)
+
 ## Type Conversion in Java
 
   When you assign a value of one data type to another, the two types might not be compatible with each other. If the data types are compatible, then Java will perform the conversion automatically known as Automatic Type Conversion, and if not then they need to be cast or converted explicitly.
